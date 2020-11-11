@@ -1,54 +1,84 @@
 :root {
     --side-bar-bg-color: #fafafa;
     --control-text-color: #777;
+    --typora-center-window-title: true;
 }
-
-/* @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext); */
-
-/* @font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Open Sans Regular'),url('./github/400.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: normal;
-    src: local('Open Sans Italic'),url('./github/400i.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: bold;
-    src: local('Open Sans Bold'),url('./github/700.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: bold;
-    src: local('Open Sans Bold Italic'),url('./github/700i.woff') format('woff');
-} */
 
 html {
-    font-size: 16px;
+    font-size: 16px;  
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: initial;
 }
 
 body {
-    /* font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif; */
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
 
+
+/* input mode  */
 #write {
-    max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
+    max-width: 960px;
+    padding-top: 2em;
+    padding-left: 60px;
+    padding-right: 60px;
+    min-height: calc(100vh - 6em);
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    margin: 0 5em;
 }
+
+.typora-node #write {
+    min-height: calc(100% - 6em);
+}
+
+
+/* meta - message - block */
+pre.md-meta-block {
+    color: rgba(146, 115, 91, 0.81);
+    padding: 1em;
+    border-radius: 2px;
+    font-size: 14px;
+    background: rgba(251, 246, 222, 0.5);
+}
+
+@media screen and (max-width: 800px) {
+
+    #write {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    #write {
+        max-width: 1000px;
+        padding: 40px 60px;
+    }
+
+    /* paper outline */
+    .pin-outline #write {
+        max-width: 1000px;
+        margin: 0 0 0;
+        border: 0;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    footer {
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .pin-outline #write {
+        max-width: 1000px;
+        padding: 40px 60px;
+    }
+}
+
 #write > ul:first-child,
 #write > ol:first-child{
     margin-top: 30px;
@@ -728,14 +758,6 @@ img + span {
     position: relative;
     top: -20px;
     margin-bottom: 20px;
-}
-
-#write {
-    max-width: 664px;
-    width: 100%;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
 }
 
 .md-fences, code, tt {
