@@ -1,3 +1,9 @@
+# 须知
+
+如要关注该项目更新动态请点击`Watch`，如支持/收藏该项目请点击`Star`。
+
+不要`Fork`！不要`Fork`！不要`Fork`！
+
 # typora-theme-css
 
 ## 下载少数派typora主题皮肤
